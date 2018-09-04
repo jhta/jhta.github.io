@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <link rel="icon" type="image/x-icon" href="icon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <title> Jeison Higuita Website </title>
 <style>
 
@@ -23,7 +23,7 @@
           width: 100wh;
           box-sizing: border-box;
           padding: 1rem;
-          font-family: 'Ubuntu', sans-serif;
+          font-family: 'Fira Sans', sans-serif;
         }
 
         p {
@@ -38,6 +38,7 @@
           margin-bottom: .7rem;
           font-size: 2rem;
           transition: .3s ease-out all;
+          margin-top: 0;
         }
         h1:hover {
           text-shadow:5px 5px 2px #00ffde, -5px -5px 2px #ff9393;
@@ -70,14 +71,30 @@
           padding-right: 0;
         }
 
+        @keyframes bar {
+          0% {
+            left: 0;
+          }
+          50% {
+            left: -50%
+          }
+          100% {
+            left: 0;
+          } 
+
+        }
         .bar {
           height: 2rem;
           position: fixed;
           bottom: 0;
           left: 0;
-          width: 100%;
+          width: 150%;
           background: #ff9393;
-          background: -webkit-linear-gradient(left, #ff9393 , #00ffde)
+          animation-name: bar;
+          animation-duration: 4s;
+          animation-delay: 1s;
+          animation-iteration-count: infinite;
+          background: -webkit-linear-gradient(left, #ff9393 15% , #00ffde)
         }
 
         @media (min-width: 600px) {
@@ -95,7 +112,7 @@
   <body>
   <section>
     <h1>Jeison Higuita</h1>
-    <p> Javascript Developer </p>
+    <p> Software Developer, Lifelong learner and Traveler.</p>
     <ul>
       <li><a target="_blank" href="https://github.com/jhta">Code</a></li>
       <li><a target="_blank" href="https://medium.com/@jeisonhiguita">Throughts</a></li>
